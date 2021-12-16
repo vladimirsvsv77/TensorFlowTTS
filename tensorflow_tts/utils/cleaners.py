@@ -109,6 +109,7 @@ def korean_cleaners(text):
     )  # '존경하는' --> ['ᄌ', 'ᅩ', 'ᆫ', 'ᄀ', 'ᅧ', 'ᆼ', 'ᄒ', 'ᅡ', 'ᄂ', 'ᅳ', 'ᆫ']
     return text
 
+
 def german_cleaners(text):
     """Pipeline for German text, including number and abbreviation expansion."""
     text = GermanTransliterate(replace={';': ',', ':': ' '}, sep_abbreviation=' -- ').transliterate(text)
