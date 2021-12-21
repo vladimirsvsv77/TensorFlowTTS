@@ -381,7 +381,7 @@ def preprocess():
         "thorsten": "german_cleaners",
         "ljspeechu": "english_cleaners",
         "synpaflex": "basic_cleaners",
-        "ruslan": "german_cleaners",
+        "ruslan": "basic_cleaners",
     }
 
     logging.info(f"Selected '{config['dataset']}' processor.")

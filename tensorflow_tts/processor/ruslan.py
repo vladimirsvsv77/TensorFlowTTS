@@ -12,7 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""Perform preprocessing and raw feature extraction for LJSpeech dataset."""
+"""Perform preprocessing and raw feature extraction for Ruslan dataset."""
 
 import os
 import re
@@ -28,7 +28,7 @@ from tensorflow_tts.utils.utils import PROCESSOR_FILE_NAME
 _pad = "pad"
 _eos = "eos"
 _punctuation = "!'(),.:;? "
-_special = "-"
+_special = "-+"
 _letters = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 
 
