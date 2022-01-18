@@ -28,7 +28,7 @@ _pad = "pad"
 _eos = "eos"
 _punctuation = "!'(),.? "
 _special = "-"
-_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜabcdefghijklmnopqrstuvwxyzäöüß"
 
 # Export all symbols:
 THORSTEN_SYMBOLS = (
@@ -43,7 +43,7 @@ _curly_re = re.compile(r"(.*?)\{(.+?)\}(.*)")
 class ThorstenProcessor(BaseProcessor):
     """Thorsten processor."""
 
-    cleaner_names: str = "german_cleaners"
+    cleaner_names: str = "basic_cleaners"
     positions = {
         "wave_file": 0,
         "text_norm": 1,

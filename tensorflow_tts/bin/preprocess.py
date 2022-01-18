@@ -374,7 +374,7 @@ def preprocess():
         "kss": "korean_cleaners",
         "libritts": None,
         "baker": None,
-        "thorsten": "german_cleaners",
+        "thorsten": "basic_cleaners",
         "ljspeechu": "english_cleaners",
         "synpaflex": "basic_cleaners",
     }
