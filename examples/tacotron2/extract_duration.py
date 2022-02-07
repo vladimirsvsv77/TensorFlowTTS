@@ -17,7 +17,7 @@
 import argparse
 import logging
 import os
-from numba import jit
+# from numba import jit
 import sys
 
 sys.path.append(".")
@@ -33,7 +33,7 @@ from tensorflow_tts.configs import Tacotron2Config
 from tensorflow_tts.models import TFTacotron2
 
 
-@jit(nopython=True)
+# @jit(nopython=True)
 def get_duration_from_alignment(alignment):
     D = np.array([0 for _ in range(np.shape(alignment)[0])])
 
@@ -138,6 +138,7 @@ def main():
     dataset = dataset.create(allow_cache=True, batch_size=args.batch_size, drop_remainder=False)
 
     # define model and load checkpoint
+
     tacotron2 = TFTacotron2(
         config=Tacotron2Config(**config["tacotron2_params"]),
         name="tacotron2",
