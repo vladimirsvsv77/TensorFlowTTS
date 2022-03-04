@@ -112,13 +112,17 @@ class LibriTTSProcessor(BaseProcessor):
         data = []
         for i, txt in enumerate(g2p_text):
             if i == len(g2p_text) - 1:
-                if txt != " " and txt != "SIL":
+                if txt != " " and txt != "SIL" and txt not in [".", "!", "?", ","]:
                     data.append("@" + txt)
                 else:
                     data.append(
                         "@END"
                     )  # TODO try learning without end token and compare results
                 break
+            if self.mode != "train":
+                if txt in [".", "!", "?", ","]:
+                    data.append("@SIL")
+                    continue
             if txt != " ":
-                data.append("@" + txt) 
+                data.append("@" + txt)
         return data

@@ -40,6 +40,7 @@ def run_mfa(
     call(
         [
             f".{os.path.sep}{mfa_path}",
+            "--clean",
             corpus_directory,
             lexicon,
             acoustic_model_path,
